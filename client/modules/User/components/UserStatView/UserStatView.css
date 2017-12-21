@@ -1,0 +1,23 @@
+.parent {
+  height: 96px;
+  width: 141px;
+  border-color: #f3f3f3;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-width: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  text-align: center;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.title {
+  padding-top: 7px;
+}
+
+.value {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 36px;
+}

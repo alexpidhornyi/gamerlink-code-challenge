@@ -2,6 +2,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './modules/App/App';
+import UserSearchPage from './modules/User/pages/UserSearchPage'
 
 // require.ensure polyfill for node
 if (typeof require.ensure !== 'function') {
@@ -23,8 +24,15 @@ if (process.env.NODE_ENV !== 'production') {
 // react-router setup with code-splitting
 // More info: http://blog.mxstbr.com/2016/01/react-apps-with-pages/
 export default (
-  <Route path="/" component={App}>
+  <Route 
+    path="/" 
+    component={App}>
     <IndexRoute
+      component={UserSearchPage}
+      
+    />
+    <Route
+      path="/postList"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
           cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);

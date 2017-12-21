@@ -55,7 +55,7 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
 app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-app.use(Express.static(path.resolve(__dirname, '../dist/client')));
+app.use(Express.static(path.resolve(__dirname, '../client')));
 app.use('/api', posts);
 app.use('/api', users);
 

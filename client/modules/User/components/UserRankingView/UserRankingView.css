@@ -1,0 +1,56 @@
+.parent {
+  min-height: 105px;
+  max-width: 433px;
+  border-color: black;
+  border: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E8E8E8;
+  background: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.left {
+  float: left;
+  max-width: 216px;
+}
+
+.type {
+  padding-top: 5px;
+  padding-left: 5px; 
+}
+
+@media only screen and (min-width: 386px) {
+  .right {
+    float: right;
+    max-width: 216px;
+  } 
+}
+@media only screen and (max-width: 385px) {
+  .right {
+    display: block;
+    max-width: 216px;
+    width: 100%;
+  }  
+}
+
+.sub-container {
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.sub-container-title {
+  font-size: 10px;
+}
+.sub-container-value {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+img{
+  max-height: 60px;
+  display: inline-block;
+}

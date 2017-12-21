@@ -7,9 +7,9 @@ import styles from './UserName.css';
 class UserName extends Component {
   render() {
     return (
-      <div>
-        <div >{this.props.name}</div>
-        <div >Last Updated: {this.calculateLastUpdated(this.props.updated)} </div>
+      <div className={styles['parent']}>
+        <div className={styles['name']}>{this.props.name}</div>
+        <div className={styles['updated']}>Last Updated: {this.calculateLastUpdated(this.props.updated)} </div>
       </div>
     );
   }

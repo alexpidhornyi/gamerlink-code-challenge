@@ -7,8 +7,8 @@ import styles from './UserNotFound.css';
 
 function UserNotFound() {
   return (
-    <div className={styles['test']}>
-      USER NOT FOUND DUMBASS
+    <div className={styles['main']}>
+      User Not Found.
     </div>
   );
 }

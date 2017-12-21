@@ -1,23 +1,18 @@
 .parent {
-  height: 96px;
-  width: 141px;
-  border-color: #f3f3f3;
-  box-sizing: border-box;
-  background: #ffffff;
-  border-width: 1px;
-  border-radius: 3px;
-  border-style: solid;
-  text-align: center;
-  margin-right: 5px;
-  display: inline-block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 15px; 
+  text-align: left;
+  max-width: 433px;
 }
 
-.title {
-  padding-top: 7px;
+.name {
+  font-size: 24px;
+  color: #4A4A4A;
+  margin-bottom: 10px;
 }
 
-.value {
-  padding-top: 20px;
-  font-weight: bold;
-  font-size: 36px;
+.updated {
+  font-size: 10px;
+  color: #9B9B9B;
 }

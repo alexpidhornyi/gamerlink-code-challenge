@@ -15,7 +15,6 @@ import styles from './UserSearchPage.css';
 class UserSearchPage extends Component {
   handleSearchUser = (name) => {
     this.props.dispatch(searchUser(name));
-    this.props.dispatch(touchedSearch());
     
   };
   

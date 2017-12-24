@@ -14,19 +14,18 @@ class UserName extends Component {
     );
   }
   calculateLastUpdated(timestamp) {
-    console.log(timestamp, (Date.now() / 1000));
     var difference = (Date.now() / 1000) - parseInt(timestamp);
-    
-    var daysDifference = Math.floor(difference/1000/60/60/24);
-    difference -= daysDifference*1000*60*60*24
 
-    var hoursDifference = Math.floor(difference/1000/60/60);
-    difference -= hoursDifference*1000*60*60
+    var daysDifference = Math.floor(difference/60/60/24);
+    difference -= daysDifference*60*60*24
 
-    var minutesDifference = Math.floor(difference/1000/60);
-    difference -= minutesDifference*1000*60
+    var hoursDifference = Math.floor(difference/60/60);
+    difference -= hoursDifference*60*60
 
-    var secondsDifference = Math.floor(difference/1000);
+    var minutesDifference = Math.floor(difference/60);
+    difference -= minutesDifference*60
+
+    var secondsDifference = Math.floor(difference);
     if (daysDifference) {
       return daysDifference + ' days';
     } else if (hoursDifference) {

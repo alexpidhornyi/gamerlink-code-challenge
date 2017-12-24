@@ -1,4 +1,4 @@
-import { ADD_USER, TOUCHED_SEARCH } from './UserActions';
+import { ADD_USER } from './UserActions';
 
 // Initial State
 const initialState = { touchedSearch: false, user: null };
@@ -9,13 +9,8 @@ const UserReducer = (state = initialState, action) => {
 
     case ADD_USER :
       return {
-        touchedSearch: state.touchedSearch,
-        user: action.user
-      };
-    case TOUCHED_SEARCH :
-      return {
         touchedSearch: true,
-        user: state.user
+        user: action.user
       };
     default:
       return state;

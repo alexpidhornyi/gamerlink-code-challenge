@@ -1,5 +1,6 @@
 import React, { PropTypes,  Component} from 'react';
 import { Link } from 'react-router';
+import { searchUser } from '../../UserActions';
 
 // Import Style
 import styles from './UserSearchBox.css';
@@ -26,12 +27,12 @@ class UserSearchBox extends Component {
     }
   }
   search() {
-    this.props.searchUser(this.state.userName);
+    this.props.dispatch(searchUser(this.state.userName));
   }
 }
 
 UserSearchBox.propTypes = {
-  searchUser: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default UserSearchBox;

@@ -5,6 +5,7 @@ const initialState = { touchedSearch: false, user: null };
 
 const UserReducer = (state = initialState, action) => {
   //console.log('TOUCHED_SEARCH', TOUCHED_SEARCH);
+  console.log('action', action, state, initialState);
   switch (action.type) {
 
     case ADD_USER :
@@ -13,7 +14,7 @@ const UserReducer = (state = initialState, action) => {
         user: action.user
       };
     default:
-      return state;
+      return state || initialState;
   }
 };
 

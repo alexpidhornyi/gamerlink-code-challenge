@@ -7,7 +7,7 @@ import UserStatView from '../components/UserStatView/UserStatView'
 import UserRankingView from '../components/UserRankingView/UserRankingView'
 import UserNotFound from '../components/UserNotFound/UserNotFound'
 import UserName from '../components/UserName/UserName'
-import { searchUser, touchedSearch } from '../UserActions';
+import { searchUser } from '../UserActions';
 import { getUser, getTouchedSearch } from '../UserReducer';
 
 import styles from './UserSearchPage.css';
@@ -21,7 +21,8 @@ class UserSearchPage extends Component {
   render() {
     return (
       <div className={styles['container']}>
-        <UserSearchBox searchUser={this.handleSearchUser}/>
+        {this.props.touchedSearch}
+        <UserSearchBox dispatch={this.props.dispatch}/>
         {this.displayUser(this.props.user, this.props.touchedSearch)}
       </div>
     );
